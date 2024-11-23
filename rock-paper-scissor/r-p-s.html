@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rock Paper Scissors latha</title>
+   <link rel="stylesheet" href="./r-p-s.css">
+</head>
+<body>
+    <div class="container">
+    <h2 class="main">Rock Paper Scissors</h2>
+
+    <button onclick="
+    playGame('rock'); 
+        " class="move-btn"><img src="./images/rock.jpeg" class="emoji"></button>
+        
+        <!-- rock button ends -->
+
+        <!-- paper button starts-->
+    <button onclick="
+    playGame('paper'); 
+    
+    " class="move-btn"><img src="./images/paper.jpeg" class="emoji"></button>
+        <!-- paper button ends -->
+
+        <!-- scissor button start -->
+        <button onclick="
+       playGame('scissor');
+
+    
+    "class="move-btn"><img src="./images/scissor.jpeg" class="emoji"></button>
+    <p class="js-result result"></p>
+    <p class="js-move"></p>
+
+    <p class="js-score score"></p>
+    <!-- reset button starts -->
+    <button onclick=" 
+       score.wins=0;
+       score.losses=0;
+       score.ties=0;
+       localStorage.removeItem('score');
+       alert('score was reset... Again start!')
+       updateScoreEle();
+    " class="reset-score-btn">Reset Code</button>
+    <!-- reset ends -->
+    <!-- java script -->
+
+        <script src="./r-p-s.js"></script>
+        </div>
+</body>
+</html>
